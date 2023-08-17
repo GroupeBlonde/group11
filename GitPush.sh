@@ -11,8 +11,10 @@ echo " IF You Want To Do This Action Type yes "
 read ans
 	if [[ $ans == $yes ]]
 	then
+echo " What Branch Do You WantTo Push To "
+read branch
 echo " Pushing... "
-git push $alias master > GitPushLog.txt
+git push $alias $branch > GitPushLog.txt
 sleep 3
 echo " ++++++Push Was Successfull+++++++ "
 echo " You can Check The Push Logs In GitPushLog.txt "
